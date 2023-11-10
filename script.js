@@ -11,6 +11,6 @@ var isDate = function (input) {
 }
 
 // Do not change the code below.
-const input = prompt("Enter Date.");
+const input = promp("Enter Date.");
 alert(isDate(input));  
 
