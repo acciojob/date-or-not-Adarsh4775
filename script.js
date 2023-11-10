@@ -1,16 +1,17 @@
 var isDate = function (input) {
   //   write your code here
-	if(input === new Date() || input === "dd/mm/year")
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
+	let date = new Date(input);
+	 if (Object.prototype.toString.call(date) === "[object Date]" && !isNaN(date.getTime())) {
+    return true;
+  } else if (typeof input === 'number' && !isNaN(input)) {
+    // Check if the input is a valid timestamp
+    return true;
+  } else {
+    return false;
+  }
+};
 
 // Do not change the code below.
-const input = promp("Enter Date.");
-alert(isDate(input));  
+const input = prompt("Enter Date.");
+alert(isDate(input));    
 
